@@ -24,7 +24,10 @@ const LoginPage = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        <h2 className='mt-6 mb-8 text-center text-3xl font-extrabold text-emerald-400'>Login your account</h2>
+        <h2 className='mt-6 mb-8 text-center text-3xl font-extrabold text-yellow-600'>Đăng nhập vào tài khoản</h2>
+        <p className='text-stone-700 text-center'>đăng nhập bằng tài khoản admin:</p>
+        <p className='text-stone-700 text-center'>email: admin@123</p>
+        <p className='text-stone-700 text-center'>Password: 123456</p>
       </motion.div>
       <motion.div
         className='sm:mx-auto sm:w-full sm:max-w-md'
@@ -32,14 +35,14 @@ const LoginPage = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        <div className='bg-gray-800 py-8 px-4 shadow sm:rounder-lg sm:px-10'>
+        <div className='bg-stone-300 py-8 px-4 shadow sm:rounder-lg sm:px-10'>
           <form onSubmit={handleSubmit} className='space-y-6'>
             
               
 
             <div>
               <label htmlFor="address" className='block text-sm font-medium text-gray-400'>
-                Email address
+                Địa chỉ email
               </label>
               <div className='mt-1 relative rounded-md shadow-sm'>
                 <div className='absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none'>
@@ -51,7 +54,7 @@ const LoginPage = () => {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value )}
-                  className=' block w-full px-3 py-2 pl-10 bg-gray-700 border border-gray-600 rounded-md shadow-sm
+                  className='text-stone-700 block w-full px-3 py-2 pl-10 bg-gray-100 border border-orange-300 rounded-md shadow-sm
                               placeholder-gray-400 focus:outline-none focus:ring-emerald-500 focus:border-e-red-500 sm:tex-sm'
                   placeholder='Youremail@example'
                 ></input>
@@ -59,12 +62,12 @@ const LoginPage = () => {
             </div>
 
             <div>
-              <label htmlFor="password" className='block text-sm font-medium text-gray-400'>
-                Password
+              <label htmlFor="password" className='block text-sm font-medium text-stone-700'>
+                Mật khẩu
               </label>
               <div className='mt-1 relative rounded-md shadow-sm'>
                 <div className='absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none'>
-                  <Lock  className=' h-5 w-5 text-gray-400 ' aria-hidden='true'></Lock >
+                  <Lock  className=' h-5 w-5 text-stone-700 ' aria-hidden='true'></Lock >
                 </div>
                 <input
                   id='password'
@@ -72,8 +75,8 @@ const LoginPage = () => {
                   required
                   value={password}
                   onChange={(e) => setPassword( e.target.value)}
-                  className=' block w-full px-3 py-2 pl-10 bg-gray-700 border border-gray-600 rounded-md shadow-sm
-                              placeholder-gray-400 focus:outline-none focus:ring-emerald-500 focus:border-e-red-500 sm:tex-sm'
+                  className='text-stone-700 block w-full px-3 py-2 pl-10 bg-gray-100 border border-orange-300 rounded-md shadow-sm
+                              placeholder-stone-700 focus:outline-none focus:ring-emerald-500 focus:border-e-red-500 sm:tex-sm'
                   placeholder='********'
                 ></input>
               </div>
@@ -83,7 +86,7 @@ const LoginPage = () => {
 
             <button
             type='submit'
-            className='w-full flex justify-center py-2 px-4 bg-emerald-500 hover:bg-emerald-700 rounded-md
+            className='w-full flex justify-center py-2 px-4 bg-yellow-600 hover:bg-yellow-700 rounded-md
                      text-sm font-medium transition duration-400 ease-in-out  cursor-pointer'
             >
               {loading?(
@@ -93,7 +96,7 @@ const LoginPage = () => {
                 </>
               ):(<>
               <LogIn className='mr-2 h-5 w-5' aria-hidden='true'></LogIn>
-              Login
+              Đăng nhập
               </>)}
             </button>
 
@@ -103,9 +106,9 @@ const LoginPage = () => {
 
           </form>
           <p className='mt-8 flex justify-center text-center text-sm text-gray-400'>
-						Don't have account?{" "}
-						<Link to='/signup' className='font-medium ml-2 text-emerald-400 hover:text-emerald-300'>
-							Signup here <ArrowRight className='inline h-4 w-4' />
+						Không có tài khoản?{" "}
+						<Link to='/signup' className='font-medium ml-2 text-yellow-600 hover:text-yellow-700'>
+							Đăng kí <ArrowRight className='inline h-4 w-4' />
 						</Link>
 					</p>
         </div>

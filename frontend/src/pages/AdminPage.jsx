@@ -9,9 +9,9 @@ import { productStore } from '../stores/useProductStore';
 import { useEffect } from 'react';
 
 const tabs = [
-    {id: "create", label: "Create Product", icon: PlusCircle},
-    {id: "products", label: "Products", icon: ShoppingBasket},
-    {id: "analytics", label: "Analytics", icon: BarChart},
+    {id: "create", label: "Thêm sản phẩm", icon: PlusCircle},
+    {id: "products", label: "Trong kho", icon: ShoppingBasket},
+    {id: "analytics", label: "Phân tích", icon: BarChart},
 ];
 
 const AdminPage = () => {
@@ -24,7 +24,7 @@ const AdminPage = () => {
     <div className=' top-0 min-h-screen  text-white relative '>
         <div className='relative z-10 container mx-auto px-4 py-16'>
             <motion.h1
-                className='text-4xl font-bold mb-8 text-emerald-400 text-center pt-16'
+                className='text-4xl font-bold mb-8 text-yellow-700 text-center pt-16'
                 initial={{opacity: 0, y: -20}}
                 animate={{opacity:1, y:0}}
                 transition={{duration: 0.8}}
@@ -38,8 +38,8 @@ const AdminPage = () => {
                     onClick ={() => setActiveTab(tab.id)}
                     className={` cursor-pointer flex items-center px-4 py-2 mx-2 rounded-md transition-colors duration-200${
                         activeTab === tab.id?
-                        " bg-emerald-600 text-white"
-                        :" bg-gray-700 text-gray-300 hover:bg-gray-600"
+                        " bg-yellow-600 text-white"
+                        :" bg-stone-500 text-white-300 hover:bg-gray-600"
                     }`}
                 >
                     <tab.icon className=' mr-2 h-5 w-5'/>

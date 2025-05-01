@@ -29,7 +29,10 @@ const SignupPage = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        <h2 className='mt-6 mb-8 text-center text-3xl font-extrabold text-emerald-400'>Create your account</h2>
+        <h2 className='mt-6 mb-8 text-center text-3xl font-extrabold text-yellow-600'>Tạo tài khoản</h2>
+        <p className='text-stone-700 text-center'>đăng nhập bằng tài khoản admin:</p>
+        <p className='text-stone-700 text-center'>userName: admin</p>
+        <p className='text-stone-700 text-center'>Password: 123456</p>
       </motion.div>
       <motion.div
         className='sm:mx-auto sm:w-full sm:max-w-md'
@@ -37,11 +40,11 @@ const SignupPage = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        <div className='bg-gray-800 py-8 px-4 shadow sm:rounder-lg sm:px-10'>
+        <div className='bg-stone-300 py-8 px-4 shadow sm:rounder-lg sm:px-10 rounded-md'>
           <form onSubmit={handleSubmit} className='space-y-6'>
             <div>
-              <label htmlFor="name" className='block text-sm font-medium text-gray-400'>
-                Fullname
+              <label htmlFor="name" className='block text-sm font-medium text-stone-700'>
+                Tên đầy đủ
               </label>
               <div className='mt-1 relative rounded-md shadow-sm'>
                 <div className='absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none'>
@@ -53,16 +56,16 @@ const SignupPage = () => {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className=' block w-full px-3 py-2 pl-10 bg-gray-700 border border-gray-600 rounded-md shadow-sm
-                              placeholder-gray-400 focus:outline-none focus:ring-emerald-500 focus:border-e-red-500 sm:tex-sm'
+                  className='text-stone-700 block w-full px-3 py-2 pl-10 bg-gray-100 border border-gray-600 rounded-md shadow-sm
+                              placeholder-gray-400 focus:outline-none focus:ring-yellow-500 focus:border-e-red-500 sm:tex-sm'
                   placeholder='Your name'
                 ></input>
               </div>
             </div>
 
             <div>
-              <label htmlFor="address" className='block text-sm font-medium text-gray-400'>
-                Email address
+              <label htmlFor="address" className='block text-sm font-medium text-stone-700'>
+                Địa chỉ email
               </label>
               <div className='mt-1 relative rounded-md shadow-sm'>
                 <div className='absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none'>
@@ -74,16 +77,16 @@ const SignupPage = () => {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className=' block w-full px-3 py-2 pl-10 bg-gray-700 border border-gray-600 rounded-md shadow-sm
-                              placeholder-gray-400 focus:outline-none focus:ring-emerald-500 focus:border-e-red-500 sm:tex-sm'
+                  className='text-stone-700 block w-full px-3 py-2 pl-10 bg-gray-100 border border-gray-600 rounded-md shadow-sm
+                              placeholder-gray-400 focus:outline-none focus:ring-yellow-500 focus:border-e-red-500 sm:tex-sm'
                   placeholder='Youremail@example'
                 ></input>
               </div>
             </div>
 
             <div>
-              <label htmlFor="password" className='block text-sm font-medium text-gray-400'>
-                Password
+              <label htmlFor="password" className='block text-sm font-medium text-stone-700'>
+                Mật khẩu
               </label>
               <div className='mt-1 relative rounded-md shadow-sm'>
                 <div className='absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none'>
@@ -95,16 +98,16 @@ const SignupPage = () => {
                   required
                   value={formData.password}
                   onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                  className=' block w-full px-3 py-2 pl-10 bg-gray-700 border border-gray-600 rounded-md shadow-sm
-                              placeholder-gray-400 focus:outline-none focus:ring-emerald-500 focus:border-e-red-500 sm:tex-sm'
+                  className='text-stone-700 block w-full px-3 py-2 pl-10 bg-gray-100 border border-gray-600 rounded-md shadow-sm
+                              placeholder-gray-400 focus:outline-none focus:ring-yellow-500 focus:border-e-red-500 sm:tex-sm'
                   placeholder='********'
                 ></input>
               </div>
             </div>
 
             <div>
-              <label htmlFor="confirmPassword" className='block text-sm font-medium text-gray-400'>
-                Confirm password
+              <label htmlFor="confirmPassword" className='block text-sm font-medium text-stone-700'>
+                Xác nhận mật khẩu
               </label>
               <div className='mt-1 relative rounded-md shadow-sm'>
                 <div className='absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none'>
@@ -116,8 +119,8 @@ const SignupPage = () => {
                   required
                   value={formData.confirmPassword}
                   onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
-                  className=' block w-full px-3 py-2 pl-10 bg-gray-700 border border-gray-600 rounded-md shadow-sm
-                              placeholder-gray-400 focus:outline-none focus:ring-emerald-500 focus:border-e-red-500 sm:tex-sm'
+                  className='text-stone-700 block w-full px-3 py-2 pl-10 bg-gray-100 border border-gray-600 rounded-md shadow-sm
+                              placeholder-gray-400 focus:outline-none focus:ring-yellow-500 focus:border-e-red-500 sm:tex-sm'
                   placeholder='********'
                 ></input>
               </div>
@@ -125,7 +128,7 @@ const SignupPage = () => {
 
             <button
             type='submit'
-            className='w-full flex justify-center py-2 px-4 bg-emerald-500 hover:bg-emerald-700 rounded-md
+            className='w-full flex justify-center py-2 px-4 bg-yellow-600 hover:bg-yellow-700 rounded-md
                      text-sm font-medium transition duration-400 ease-in-out  cursor-pointer'
             >
               {loading?(
@@ -135,7 +138,7 @@ const SignupPage = () => {
                 </>
               ):(<>
               <UserPlus className='mr-2 h-5 w-5' aria-hidden='true'></UserPlus>
-              Sign up
+              Đăng kí
               </>)}
             </button>
 
@@ -145,9 +148,9 @@ const SignupPage = () => {
 
           </form>
           <p className='mt-8 text-center text-sm text-gray-400'>
-						Already have an account?{" "}
-						<Link to='/login' className='font-medium text-emerald-400 hover:text-emerald-300'>
-							Login here <ArrowRight className='inline h-4 w-4' />
+						Bạn đã có tài khoản?{" "}
+						<Link to='/login' className='font-medium text-yellow-600 hover:text-yellow-700'>
+							Đăng nhập ở đây <ArrowRight className='inline h-4 w-4' />
 						</Link>
 					</p>
         </div>

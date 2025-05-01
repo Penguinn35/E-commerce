@@ -12,18 +12,18 @@ const Navbar = () => {
 	// const user = true;
 	// const isAdmin = true;
     return (
-        <header className='fixed top-0 left-0 w-full bg-gray-900 bg-opacity-90 backdrop-blur-md shadow-lg z-40 transition-all duration-300 border-b border-emerald-800'>
+        <header className='fixed top-0 left-0 w-full bg-orange-200 bg-opacity-90 backdrop-blur-md shadow-lg z-40 transition-all duration-300 '>
             <div className='container mx-auto py-3 px-4'>
                 <div className='flex flex-wrap justify-between items-center'>
-                    <Link to='/' className='text-2xl font-bold text-emerald-400 items-center space-x-2 flex'>
-                        E-Commerce
+                    <Link to='/' className='text-4xl font-bold text-gray-700 items-center space-x-2 flex'>
+                        I'm công
                     </Link>
 
-                    <nav className='flex flex-wrap items-center gap-4'>
-                        <Link to={"/"}>Home</Link>
+                    <nav className='flex flex-wrap items-center gap-4 text-gray-700 '>
+                        <Link className='font-bold' to={"/"}>Home</Link>
                         {user && (
                             <Link to={"/cart"} className='relative group'>
-                                <ShoppingCart className='inline-block mr-1 group-hover:text-emerald-400' size={20}></ShoppingCart>
+                                <ShoppingCart className='inline-block mr-1 group-hover:text-yellow-700' size={20}></ShoppingCart>
                           <span className='hidden sm:inline'>Cart</span>
 						  <span className='absolute -top-2 -left-2'>{cart.length}</span>
                             </Link>
@@ -31,7 +31,7 @@ const Navbar = () => {
                         }
                         {isAdmin && (
 							<Link
-								className='bg-emerald-700 hover:bg-emerald-600 text-white px-3 py-1 rounded-md font-medium
+								className='bg-yellow-800 hover:bg-yellow-800 text-white px-3 py-1 rounded-md font-medium
 								 transition duration-300 ease-in-out flex items-center'
 								to={"/dashboard"}
 							>
@@ -41,7 +41,7 @@ const Navbar = () => {
 						)}
                         {user ? (
 							<button
-								className='bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 
+								className='bg-stone-500 hover:bg-gray-400 text-white py-2 px-4 
 						rounded-md flex items-center transition duration-300 ease-in-out'
 								onClick={logout}>
 								<LogOut size={18} />
@@ -51,7 +51,7 @@ const Navbar = () => {
 							<>
 								<Link
 									to={"/signup"}
-									className='bg-emerald-600 hover:bg-emerald-700 text-white py-2 px-4 
+									className='bg-yellow-700 hover:bg-yellow-800 text-white py-2 px-4 
 									rounded-md flex items-center transition duration-300 ease-in-out'
 								>
 									<UserPlus className='mr-2' size={18} />
