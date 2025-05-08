@@ -5,7 +5,7 @@
 [Visit my website, it's running](https://e-commerce-0jxu.onrender.com/)
 
 About This Project:
-```
+
 -   🗄️ MongoDB & Redis Integration
 -   🔐 Robust Authentication System
 -   🔑 JWT with Refresh/Access Tokens
@@ -18,9 +18,9 @@ About This Project:
 -   🎨 Design with Tailwind
 -   🛒 Cart
 -   🚀Caching with Redis
-```
-### Setup .env file
 
+### Setup .env file
+```
 PORT=5000
 MONGO_URI=
 
@@ -35,7 +35,7 @@ CLOUDINARY_API_SECRET=
 
 CLIENT_URL=http://localhost:5173
 NODE_ENV=development
-
+```
 ### Run this app locally
 ```
 npm run build
