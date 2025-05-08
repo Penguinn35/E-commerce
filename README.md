@@ -21,7 +21,7 @@ About This Project:
 
 ### Setup .env file
 ```
-PORT=5000
+PORT=5001
 MONGO_URI=
 
 UPSTASH_REDIS_URL=
