@@ -2,7 +2,7 @@
 
 ![Demo App](/frontend/public/app.png)
 
-[Video Tutorial on Youtube](https://youtu.be/sX57TLIPNx8)
+[Visit my website, it's running](https://e-commerce-0jxu.onrender.com/)
 
 About This Course:
 
